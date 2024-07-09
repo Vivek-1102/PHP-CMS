@@ -1,0 +1,251 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the header */
+header {
+    background-image: url('./header-bg.jpg'); /* Relative path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+/* Styling for the content within the header */
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px; /* Optional: Adjust max-width to contain content */
+    margin: 0 auto; /* Center header content horizontally */
+    padding: 20px; /* Optional: Add padding to header content */
+}
+
+/* Styling for the logo/image within the header */
+.header-content img {
+    max-width: 100%; /* Ensure the image scales appropriately */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Optional: Adjust margin to separate image from text */
+}
+
+/* Styling for the heading within the header */
+.header-content h1 {
+    margin: 0; /* Remove default margin */
+}
+
+/* CSS Styles */
+.header-logo {
+    flex: 0 0 auto; /* Ensure logo doesn't grow or shrink */
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.header-title {
+    flex: 0 1 auto; /* Allow title to grow, but not shrink */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold; /* Optional: Adjust font weight */
+}
+
+.header-nav {
+    display: flex; /* Use flexbox for navigation links */
+    gap: 20px; /* Adjust space between links */
+    margin-left: auto; /* Push navigation links to the right */
+}
+
+.header-link {
+    color: #fff; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.header-link:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+
+
+.logo img {
+    max-height: 50px;
+}
+
+.company-name {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: #e9e2e29a;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+    font-size: 2.5em;
+}
+
+h3 {
+    color: #333;
+    font-size: 2.0em;
+}
+
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.bolden {
+    font-weight: bold;
+}
+
+.centered-content {
+    text-align: center; /* Center aligns the content inside the container */
+    margin-bottom: 20px; /* Example margin bottom to separate each centered content */
+}
+
+
+.files-by-year {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.file {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffdbbb;
+    margin-right: 20px
+}
+
+.file img {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type=text], input[type=number], input[type=file] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+    box-sizing: border-box;
+}
+
+
+.pdf-button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #df6b0d; /* Blue color, you can change this to your desired color */
+    color: white;
+    text-decoration: none;
+    border: 1px solid black; /* Same color as background for a solid border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    /* Center the button within its container */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pdf-button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #df6b0d; /* Blue color, you can change this to your desired color */
+    color: white;
+    text-decoration: none;
+    border: 1px solid black; /* Same color as background for a solid border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    
+}
+
+.pdf-button1:hover {
+    background-color: #863e03; /* Darker shade of blue on hover */
+    border-color:black; /* Darker shade of blue for border on hover */
+    color: white; /* Maintain text color on hover */
+    
+}
+
+.pdf-button2:hover {
+    background-color: #863e03; /* Darker shade of blue on hover */
+    border-color:black; /* Darker shade of blue for border on hover */
+    color: white; /* Maintain text color on hover */
+    
+}
+
+.image-hover-effect {
+    transition: transform 0.5s ease; /* Smooth transition for the transform property */
+}
+
+.image-hover-effect:hover {
+    transform: rotateY(360deg); /* Rotate the image around the Y-axis */
+}
+
+
+button {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    
+    background-color: #df6b0d; /* Blue color, you can change this to your desired color */
+    color: white;
+    text-decoration: none;
+    border: 1px solid black; /* Same color as background for a solid border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    /* Center the button within its container */
+    position: relative;
+}
+
+button:hover {
+    background-color: #863e03; /* Darker shade of blue on hover */
+    border-color:black; /* Darker shade of blue for border on hover */
+    color: white; /* Maintain text color on hover */}
+
+/* a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1e90ff;
+} */
+ .header-link{
+    color: black;
+}
+
+hr {
+    margin: 20px 0; /* Adjust vertical spacing as needed */
+    border: none;
+    border-top: 1px solid #b98e3e; /* Gray color border */
+}
+
+
+footer {
+    background-color: #d15811;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+ 
