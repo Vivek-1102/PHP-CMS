@@ -11,26 +11,23 @@
 <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> 
 
 <script>
-     function showDeleteModal(userId) {
-        var modal = document.getElementById('deleteModal');
-        modal.style.display = 'block';
-        // Store the user ID in a data attribute for later use
-        modal.setAttribute('data-user-id', userId);
-    }
+    function showDeleteModal(userId) {
+  userIdToDelete = userId;
+  document.getElementById('deleteModal').style.display = 'block';
+}
 
-    function hideDeleteModal() {
-        var modal = document.getElementById('deleteModal');
-        modal.style.display = 'none';
-        // Clear the stored user ID
-        modal.removeAttribute('data-user-id');
-    }
+function hideDeleteModal() {
+  document.getElementById('deleteModal').style.display = 'none';
+   // Clear the stored user ID
+      modal.removeAttribute('data-user-id');
+}
 
-    function deleteUser(userId) {
-        // Construct the delete URL using the stored user ID
-        var deleteUrl = 'users.php?delete=' + encodeURIComponent(userId);
-        // Redirect to delete URL
-        location.href = deleteUrl;
-    }
+function confirmDeleteUser() {
+  // Construct the delete URL using the stored user ID
+  var deleteUrl = 'users.php?delete=' + encodeURIComponent(userIdToDelete);
+  // Redirect to delete URL
+  location.href = deleteUrl;
+}
 
 
       function showToast(message, position, type) {

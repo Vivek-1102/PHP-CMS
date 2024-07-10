@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2024 at 03:58 PM
+-- Generation Time: Jul 10, 2024 at 08:39 PM
 -- Server version: 8.0.28
 -- PHP Version: 8.0.30
 
@@ -219,8 +219,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `active`, `added`, `role`) VALUES
-(21, 'vivek', 'vveksngh1102@gmail.com', 'be459340ddb9c8286fc08bebdce70ca287e03a1a', 1, '2024-07-09 22:51:04', 'admin'),
-(23, 'gyaan', 'gyaan@gmail.com', 'ff3bfa77955e977b82a09c83619e4cad0ca099cb', 1, '2024-07-09 23:25:47', 'user');
+(38, 'admin', 'admin@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1, '2024-07-11 00:06:22', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -264,7 +263,7 @@ ALTER TABLE `transaction_log`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -138,6 +138,16 @@ include('includes/header.php');
 <!-- Logic for adding Users -->
 
 <?php 
+if ($stm = $pdo->prepare('SELECT * FROM users')){
+  $stm->execute();
+
+
+  $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+}
+
+
+
 if (isset($_GET['delete'])) {
   // Delete user if delete parameter is set
   $deleteId = $_GET['delete'];
@@ -154,6 +164,7 @@ if (isset($_GET['delete'])) {
       echo 'Could not prepare delete statement!';
   }
 }
+
 ?>
 
 <?php
@@ -182,13 +193,7 @@ if (isset($_POST['username']) && isset($_POST['add_user'])) {
     }
 }
 
-if ($stm = $pdo->prepare('SELECT * FROM users')){
-    $stm->execute();
 
-
-    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
-
-}
 
 ?>
 
@@ -281,7 +286,7 @@ if ($stm = $pdo->prepare('SELECT * FROM users')){
                   <td>
                   <button class= " pdf-button2" onclick="location.href='users_edit.php?id=<?php echo htmlspecialchars($record['id']); ?>'">Edit</button>
                   </td>
-                  <td> <button class= "pdf-button2" onclick="showDeleteModal('<?php echo htmlspecialchars($record['id']); ?>')">Delete</button></td>
+                  <td> <button name="delete_id" class= "pdf-button2" onclick="showDeleteModal('<?php echo htmlspecialchars($record['id']); ?>')">Delete</button></td>
                   <td> <button class= "pdf-button2" onclick="location.href='reset.php?id=<?php echo htmlspecialchars($record['id']); ?>'">Reset</button></td>
 
                     <!--  -->
@@ -297,18 +302,20 @@ if ($stm = $pdo->prepare('SELECT * FROM users')){
 </div>
 </div>
 
+<!-- Delete Modal -->
 <div id="deleteModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1000;">
-    <div style="background-color: #fff; width: 300px; margin: 15% auto; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);">
-        <p style="color: #000;">Are you sure you want to delete this user?</p>
-        <div style="text-align: center;">
-            <button class= " rounded-button" style="background-color: #dc3545; color: #fff; border: none; padding: 5px 10px; cursor: pointer; text-decoration: none; margin-right: 10px;" onclick="deleteUser('<?php echo htmlspecialchars($record['id']); ?>')">Delete</button>
-            <button class= " rounded-button2 "style="background-color: #6c757d; color: #fff; border: none; padding: 5px 10px; cursor: pointer; text-decoration: none;" onclick="hideDeleteModal()">Cancel</button>
-        </div>
+  <div style="background-color: #fff; width: 300px; margin: 15% auto; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);">
+    <p style="color: #000;">Are you sure you want to delete this user?</p>
+    <div style="text-align: center;">
+      <button class="rounded-button" style="background-color: #dc3545; color: #fff; border: none; padding: 5px 10px; cursor: pointer; text-decoration: none; margin-right: 10px;" onclick="confirmDeleteUser()">Delete</button>
+      <button class="rounded-button2" style="background-color: #6c757d; color: #fff; border: none; padding: 5px 10px; cursor: pointer; text-decoration: none;" onclick="hideDeleteModal()">Cancel</button>
     </div>
+  </div>
 </div>
 
 <script>
  new DataTable('#user-table');
+ 
 </script>
 
 <?php
