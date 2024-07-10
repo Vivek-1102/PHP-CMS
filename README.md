@@ -28,9 +28,9 @@ To get started with the CMS project, follow these steps:
 1. **Clone the repository**
     ```bash
     git clone https://github.com/Vivek-1102/PHP-CMS.git
-2. **Import the database
+2. **Import the database**
     ```bash
-     cms.sql**
+     cms.sql
 3. **Run the project**
 4. **Try login via**
    ```bash
