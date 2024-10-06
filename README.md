@@ -4,6 +4,14 @@
 
 Welcome to the PHP-CMS Project! This Content Management System (CMS) is developed in PHP, offering a seamless interface for managing content with CRUD (Create, Read, Update, Delete) operations. The system includes robust authentication with roles for Admin and User, allowing for precise control over content management. The user interface is enhanced with DataTables, jQuery Ajax, and Bootstrap 5, ensuring a smooth, responsive, and interactive user experience. You can manage both posts and users efficiently within this system.
 
+## Why CMS project:
+
+- **Efficient Content Management**: The project was essential for streamlining the frequent updates and management of content on the "SIR Bulletin" section, ensuring timely and accurate dissemination of information within the organization.
+
+- **Scalable User Management**: By implementing role-based access control (RBAC), the project addressed the need for secure, flexible user roles, enabling administrators to manage content and users efficiently while maintaining security and accountability.
+
+- **Improved User Experience**: The CMS incorporated responsive design, user-friendly interfaces, and error-handling mechanisms, providing an intuitive system for both technical and non-technical users, which was crucial for minimizing errors and enhancing productivity.
+
 ## Features
 
 - **User Authentication:** Secure login for Admin and User roles.
