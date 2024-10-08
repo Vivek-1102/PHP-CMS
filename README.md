@@ -22,7 +22,7 @@ Welcome to the PHP-CMS Project! This Content Management System (CMS) is develope
 - **Interactive Data Tables:** Enhanced user interaction with DataTables.
 - **Toast Notifications:** Instant feedback for CRUD operations.
 
-## Technologies Used
+## Technologies 
 
 - **Backend:** PHP, MySQL
 - **Frontend:** Bootstrap 5, DataTables, jQuery Ajax
