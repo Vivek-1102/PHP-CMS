@@ -1,7 +1,7 @@
 
  <?php
 $host = 'localhost';
-$dbname = 'yourDatabaseName';
+$dbname = 'yourDatabaseName'; // Update with your MYSQL database name
 $username = 'yourUsername'; // Update with your MySQL username
 $password = 'yourPassword'; // Update with your MySQL password
 
